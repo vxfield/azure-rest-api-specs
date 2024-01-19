@@ -9,10 +9,13 @@ python:
   license-header: MICROSOFT_MIT_NO_VERSION
   namespace: azure.quantum._client
   package-name: azure-quantum
-  add-credentials: true
+  add-credential: true
   credential-scopes: "https://quantum.microsoft.com/.default"
   clear-output-folder: true
   no-namespace-folders: false
+  generate-metadata: false
+  models-mode: msrest
+  version-tolerant: true
 ```
 
 ```yaml $(python) && $(python-mode) == 'update'
