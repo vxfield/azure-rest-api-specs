@@ -26,7 +26,7 @@
     "application/json"
   ],
   "securityDefinitions": {
-    "AzureAuth": {
+    "AADToken": {
       "type": "oauth2",
       "tokenUrl": "https://login.microsoftonline.com/common/oauth2/v2.0/token",
       "flow": "application",
@@ -35,7 +35,7 @@
         "https://quantum.microsoft.com/.default": "client credential scope"
       }
     },
-    "api_key": {
+    "AzureKey": {
       "type": "apiKey",
       "name": "x-ms-quantum-api-key",
       "in": "header",
@@ -44,10 +44,12 @@
   },
   "security": [
     {
-      "AzureAuth": [
+      "AADToken": [
         "https://quantum.microsoft.com/.default"
-      ],
-      "api_key": []
+      ]
+    },
+    {
+      "AzureKey": []
     }
   ],
   "paths": {
